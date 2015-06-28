@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'ngCordova'])
+angular.module('starter', ['ionic', 'ngCordovaOauth'])
 
 .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -23,6 +23,14 @@ angular.module('starter', ['ionic', 'ngCordova'])
 
     $scope.twitterLogin = function() {
         $cordovaOauth.twitter("CLIENT_ID_HERE", "CLIENT_SECRET_HERE").then(function(result) {
+            console.log(JSON.stringify(result));
+        }, function(error) {
+            console.log(JSON.stringify(error));
+        });
+    }
+
+    $scope.facebookLogin = function() {
+        $cordovaOauth.facebook("APP_ID_HERE", ["email"], {"auth_type": "rerequest"}).then(function(result) {
             console.log(JSON.stringify(result));
         }, function(error) {
             console.log(JSON.stringify(error));

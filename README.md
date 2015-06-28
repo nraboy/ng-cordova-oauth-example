@@ -1,3 +1,5 @@
+[![PayPal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ER9U5FD7ZKX72)
+
 # Oauth Example for Ionic Framework
 
 This example will demonstrate how to use ngCordova to authenticate with various oauth providers and retrieve
@@ -8,6 +10,8 @@ an access token for use with their API.
 * Apache Cordova 3.5+
 * Apache Cordova Whitelist Plugin
 * Apache Cordova InAppBrowser Plugin
+* Apache Cordova Keyboard Plugin
+* Apache Cordova Statusbar Plugin
 
 ## Configuration
 
@@ -17,6 +21,8 @@ Download this example project from GitHub and run the following commands:
 $ ionic platform add android
 $ cordova plugin add org.apache.cordova.inappbrowser
 $ cordova plugin add cordova-plugin-whitelist
+$ cordova plugin add cordova-plugin-keyboard
+$ cordova plugin add cordova-plugin-statusbar
 ```
 
 The above commands will add the Android build platform and install the required Apache InAppBrowser plugin.
