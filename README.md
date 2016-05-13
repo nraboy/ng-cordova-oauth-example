@@ -15,6 +15,16 @@ an access token for use with their API.
 
 ## Configuration
 
+### The Recommended Way
+
+Run the following to install all necessary platforms and plugins:
+
+```
+ionic state reset
+```
+
+### The Manual Way
+
 Download this example project from GitHub and run the following commands:
 
 ```
@@ -26,6 +36,8 @@ $ cordova plugin add cordova-plugin-statusbar
 ```
 
 The above commands will add the Android build platform and install the required Apache InAppBrowser plugin.
+
+### Provider Setup
 
 This example application requires you to have your own provider application registered with whatever provider you choose to use.  Doing so will give you a unique client id that can be included into your project.  When registering your application with an oauth provider, make sure to set the callback uri to **http://localhost/callback**, otherwise ngCordova will not function.
 
@@ -55,4 +67,4 @@ Apache Cordova - [http://cordova.apache.org](http://cordova.apache.org)
 
 ngCordova - [http://www.ngcordova.com](http://www.ngcordova.com)
 
-Nic Raboy's Code Blog - [https://blog.nraboy.com](https://blog.nraboy.com)
+The Polyglot Developer - [https://www.thepolyglotdeveloper.com](https://www.thepolyglotdeveloper.com)

@@ -2,7 +2,6 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <title></title>
 
@@ -17,19 +16,20 @@
         <script src="lib/ionic/js/ionic.bundle.js"></script>
 
         <!-- cordova script (this will be a 404 during development) -->
-        <script src="js/ng-cordova-oauth.min.js"></script>
-        <script src="js/sha1.js"></script>
         <script src="cordova.js"></script>
+        <script src="js/sha1.js"></script>
+        <script src="lib/ng-cordova-oauth/dist/ng-cordova-oauth.min.js"></script>
 
         <!-- your app's js -->
         <script src="js/app.js"></script>
     </head>
     <body ng-app="starter">
-        <ion-pane>
+        <ion-pane ng-controller="MainController">
             <ion-header-bar class="bar-stable">
-                <h1 class="title">Ionic Blank Starter</h1>
+                <h1 class="title">Ionic Oauth Example</h1>
             </ion-header-bar>
-            <ion-content ng-controller="ExampleController">
+            <ion-content>
+                <button class="button" ng-click="linkedinLogin()">LinkedIn</button>
                 <button class="button" ng-click="imgurLogin()">Imgur</button>
                 <button class="button" ng-click="twitterLogin()">Twitter</button>
                 <button class="button" ng-click="facebookLogin()">Facebook</button>
